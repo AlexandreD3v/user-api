@@ -43,22 +43,22 @@ export class UsersService {
 
   async findOne(id: number) {
     const res = await this.userRepository.findOne({ where: { id: id } });
-    return { obj: res, msg: 'This action returns a #${id} user'};
+    return { obj: res, msg: 'This action returns a id '+ id + ' user'};
   }
 
   async findCpf(cpf: string) {
     const res = await this.userRepository.findOne({ where: { cpf: cpf } });
-    return { obj: res, msg: 'This action returns a #${id} user by CPF'};
+    return { obj: res, msg: 'This action returns a cpf '+ cpf + ' user by CPF'};
   }
 
   async findAddress(cep: string): Promise<Observable<AxiosResponse<[]>>> {
 
-    let cachedvalue = Any;
+ /*    let cachedvalue = Any;
     try{
-      cachedvalue = JSON.parse(await this.cacheManager.get(cep));
+      cachedvalue = JSON.parse(await this.cacheManager.get(cep)); */
     
 
-    if(!cachedvalue){
+    //if(!cachedvalue){
       let address = this.httpService.get(`https://viacep.com.br/ws/${cep}/json`, {
         headers: {
           'Accept': 'application/json'
@@ -66,24 +66,24 @@ export class UsersService {
       }).pipe(
         map(response => response.data),
         );
-        await this.cacheManager.set(cep, JSON.stringify(address), { ttl: 1000 });
+       // await this.cacheManager.set(cep, JSON.stringify(address), { ttl: 1000 });
         return address;
-     }
-     else{
+    // }
+    // else{
      // return cachedvalue;
-    }  
-  } catch(err){
+    //}  
+ /*  } catch(err){
 
-  }    
+  } */    
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
     const user = await this.userRepository.update({ id }, updateUserDto);
-    return { obj: user, user: '`This action updates a #${id} user'};
+    return { obj: user, user: 'This action updates a id '+ id + ' user'};
   }
 
   async remove(id: number) {
     await this.userRepository.delete({ id });
-    return `This action removes a #${id} user`;
+    return 'This action removes a id '+ id + ' user';
   }
 }

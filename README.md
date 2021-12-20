@@ -29,8 +29,32 @@ Repositorio de desenvolvimento de atividade de teste utilizando [Nest.js](https:
 A Api (/users-api) disponibiliza dos seguintes serviços:
 
 - Criar novo usuário (/users-api/create)
+Json:
+```
+{
+	"name":"",
+	"phone":"",
+	"cpf":"",
+	"cep":"",
+	"logradouro":"",
+	"city":"",
+	"state":"",
+	"password":"",
+	"passwordConfirmation":""
+}
+```
+
 
 - Criar novo usuário com autentificação (/users-api/admin)
+Json:
+```
+{
+	"name":"",
+	"cpf":"",
+	"password":"",
+	"passwordConfirmation":""
+}
+```
 
 - Listagem de usuários (/users-api/list)
 
