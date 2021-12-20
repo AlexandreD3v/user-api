@@ -1,7 +1,5 @@
 import {
-        BaseEntity,
         Entity,
-        Unique,
         PrimaryGeneratedColumn,
         Column,
         CreateDateColumn,
@@ -35,9 +33,6 @@ export class User {
 
         @Column({ nullable: true })
         state: string;
-
-        @Column({ nullable: true, default: true })
-        is_ative: boolean;
         
         @Column({ nullable: true })
         password: string;
@@ -66,7 +61,6 @@ export class User {
                 this.logradouro = todo?.logradouro;
                 this.city = todo?.city;
                 this.state = todo?.state;
-                this.is_ative = todo?.is_ative;
                 this.password = todo?.password;
                 this.createdAt = todo?.createdAt;
                 this.updatedAt = todo?.updatedAt;

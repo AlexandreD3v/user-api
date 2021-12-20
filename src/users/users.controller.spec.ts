@@ -1,9 +1,7 @@
 import { HttpService } from '@nestjs/axios';
 import { CacheModule, INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { json } from 'stream/consumers';
 import { UsersController } from './users.controller';
-import { UsersModule } from './users.module';
 import { UsersService } from './users.service';
 
 describe('UsersController', () => {

@@ -31,6 +31,12 @@ export class UsersController {
   }
 
   @UseInterceptors(CacheInterceptor)
+  @Get('/list/:id')
+  list(@Param('id') id: string) {
+    return this.usersService.findOne(+id);
+  }
+
+  @UseInterceptors(CacheInterceptor)
   @Get('/findAddress/:cep')
   findAddress(@Param('cep') cep: string) {
     return this.usersService.findAddress(cep);

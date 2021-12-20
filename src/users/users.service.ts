@@ -28,6 +28,14 @@ export class UsersService {
     return { obj: user, user: 'This action adds a new user'};
   }
 
+  async createAdminUser(createUserDto: CreateSimpleUserDto): Promise<User> {
+    if (createUserDto.password != createUserDto.passwordConfirmation) {
+      throw new UnprocessableEntityException('As senhas não conferem');
+    } else {
+      return this.userRepository.createUser(createUserDto);
+    }
+  }
+
   async findAll() {
     const res = await this.userRepository.find()
     return { obj: res, msg: 'This action returns all users'};
@@ -77,13 +85,5 @@ export class UsersService {
   async remove(id: number) {
     await this.userRepository.delete({ id });
     return `This action removes a #${id} user`;
-  }
-
-  async createAdminUser(createUserDto: CreateSimpleUserDto): Promise<User> {
-    if (createUserDto.password != createUserDto.passwordConfirmation) {
-      throw new UnprocessableEntityException('As senhas não conferem');
-    } else {
-      return this.userRepository.createUser(createUserDto);
-    }
   }
 }

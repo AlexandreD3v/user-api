@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework para a construção de aplicativos do lado do servidor eficientes e escalonáveis..</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -28,17 +28,21 @@ Repositorio de desenvolvimento de atividade de teste utilizando [Nest.js](https:
 
 A Api (/users-api) disponibiliza dos seguintes serviços:
 
-- Criar novo usuário (/users-api)
+- Criar novo usuário (/users-api/create)
 
-- Listagem de usuários
+- Criar novo usuário com autentificação (/users-api/admin)
 
-- Editar usuário
+- Listagem de usuários (/users-api/list)
 
-- Recuperar usuário por CPF
+- Editar usuário (/users-api/update/:id)
 
-- Remover usuário
+- Remover usuário (/users-api/delete/:id)
 
-- Recuperar endereço por CEP
+- Recuperar usuário por CPF (/users-api/listUserByCPF/:cpf)
+
+- Recuperar endereço por CEP (/users-api/findAddress/:cep)
+
+- Recuperar usuario por id (/users-api/find/:)id
 
 ## Instalação
 
@@ -72,15 +76,15 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Suporte
 
-Nest é um projeto de código aberto licenciado pelo MIT. Pode crescer graças aos anos de patrocinadores e ao apoio de patrocinadores incríveis. Você queira se juntar a eles, [leia mais aqui] (https://docs.nestjs.com/support).
+Nest é um projeto de código aberto licenciado pelo MIT. Pode crescer graças aos patrocinadores e soporte da comunidade incrível. Se você quer se juntar a eles, [leia mais aqui] (https://docs.nestjs.com/support).
 
-## Stay in touch
+## Contato
 
 - Autor - [Alexandre J. Corrêa](https://github.com/AlexandreD3v)
 - Website - [https://nestjs.com](https://nestjs.com/)
 
-## License
+## Licença
 
 Nest is [MIT licensed](LICENSE).
