@@ -43,7 +43,7 @@ Json:
 	"passwordConfirmation":""
 }
 ```
-
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/create.png" alt="Create">
 
 - Criar novo usuário com autentificação (/users-api/admin)
 Json:
@@ -55,18 +55,25 @@ Json:
 	"passwordConfirmation":""
 }
 ```
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/admin.png" alt="Create">
 
 - Listagem de usuários (/users-api/list)
-
-- Editar usuário (/users-api/update/:id)
-
-- Remover usuário (/users-api/delete/:id)
-
-- Recuperar usuário por CPF (/users-api/listUserByCPF/:cpf)
-
-- Recuperar endereço por CEP (/users-api/findAddress/:cep)
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/list.png" alt="list">
 
 - Recuperar usuario por id (/users-api/find/:)id
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/listId.png" alt="listId">
+
+- Editar usuário (/users-api/update/:id)
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/update.png" alt="update">
+
+- Remover usuário (/users-api/delete/:id)
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/delete.png" alt="delete">
+
+- Recuperar usuário por CPF (/users-api/listUserByCPF/:cpf)
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/listCPF.png" alt="listCPF">
+
+- Recuperar endereço por CEP (/users-api/findAddress/:cep)
+<img src="https://github.com/AlexandreD3v/user-api/blob/387e873a3480fff9dbf6f31e11d5aa4630c65db1/img/findAddress.png" alt="findAddress">
 
 ## Instalação
 
